@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Flash_Card</string>
+    <string name="insert">Insert</string>
+    <string name="cancel">Cancel</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="enter_the_content">Enter the content</string>
+    <string name="enter_the_title">Enter the title</string>
+    <string name="enter_the_topic">Enter the topic</string>
+    <string name="enter_the_sentence">Enter the sentence</string>
+    <string name="topic">Topic</string>
+    <string name="check_the_content">Check the content</string>
+    <string name="check_the_sentence">Check the sentence</string>
+    <string name="sentence">Sentence</string>
+    <string name="start">Start</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+</resources>

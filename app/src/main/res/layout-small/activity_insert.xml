@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Insert_Activity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="51dp"
+        android:layout_height="26dp"
+        android:paddingStart="5sp"
+        android:paddingEnd="5sp"
+        android:text="@string/title"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.224" />
+
+    <TextView
+        android:id="@+id/contentTextView"
+        android:layout_width="83dp"
+        android:layout_height="30dp"
+        android:paddingStart="5sp"
+        android:paddingEnd="5sp"
+        android:text="@string/content"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <TextView
+        android:id="@+id/topicTextView"
+        android:layout_width="68dp"
+        android:layout_height="25dp"
+        android:paddingStart="5sp"
+        android:paddingEnd="5sp"
+        android:text="@string/topic"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contentTextView"
+        app:layout_constraintVertical_bias="0.231" />
+
+    <TextView
+        android:id="@+id/sentenceTextView"
+        android:layout_width="72dp"
+        android:layout_height="24dp"
+        android:paddingStart="5sp"
+        android:paddingEnd="5sp"
+        android:text="@string/sentence"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topicTextView"
+        app:layout_constraintVertical_bias="0.278" />
+
+
+    <EditText
+        android:id="@+id/editTextTopic"
+        android:layout_width="202dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints="topic"
+        android:ems="10"
+        android:hint="@string/enter_the_topic"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toEndOf="@+id/topicTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContent"
+        app:layout_constraintVertical_bias="0.143" />
+
+    <EditText
+        android:id="@+id/editTextSentence"
+        android:layout_width="214dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints="topic"
+        android:ems="10"
+        android:hint="@string/enter_the_sentence"
+        android:inputType="textMultiLine"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/sentenceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTopic"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="195dp"
+        android:layout_height="48dp"
+        android:autofillHints="title"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/enter_the_title"
+        android:textSize="12sp"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toEndOf="@+id/titleTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.208" />
+
+    <EditText
+        android:id="@+id/editTextContent"
+        android:layout_width="204dp"
+        android:layout_height="50dp"
+        android:autofillHints="content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/enter_the_content"
+        android:textSize="12sp"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toEndOf="@+id/contentTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTitle"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="112dp"
+        android:layout_height="56dp"
+        android:text="@string/cancel"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sentenceTextView"
+        app:layout_constraintVertical_bias="0.768" />
+
+    <Button
+        android:id="@+id/insertButton"
+        android:layout_width="112dp"
+        android:layout_height="56dp"
+        android:text="@string/insert"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSentence"
+        app:layout_constraintVertical_bias="0.655" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
