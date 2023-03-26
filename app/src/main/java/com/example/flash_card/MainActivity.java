@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button insert,start;
+    Button insert,start,manage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         insert = findViewById(R.id.insert);
         start = findViewById(R.id.start);
+        manage = findViewById(R.id.manage);
 
         insert.setOnClickListener(
                 view -> {
@@ -31,5 +32,13 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(startInsertActivityIntent);
                 }
         );
+
+        manage.setOnClickListener(
+                view -> {
+                    Intent startManageActivityIntent = new Intent(MainActivity.this,Manage_Activity.class);
+                    startActivity(startManageActivityIntent);
+                }
+        );
+
     }
 }

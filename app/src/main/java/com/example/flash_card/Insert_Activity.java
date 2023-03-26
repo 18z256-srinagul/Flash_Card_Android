@@ -13,8 +13,6 @@ import android.widget.Toast;
 
 import com.example.flash_card.database.DBHelper;
 
-import java.util.Locale;
-
 public class Insert_Activity extends AppCompatActivity {
 
     Button cancel, insert;
@@ -66,7 +64,7 @@ public class Insert_Activity extends AppCompatActivity {
 
 
                     try (DBHelper helper = new DBHelper(Insert_Activity.this)) {
-                        if(!helper.isTopicPresent(topicText)){
+                        if(!helper.IsTopicPresent(topicText)){
                             AlertDialog.Builder builder = new AlertDialog.Builder(Insert_Activity.this);
                             builder.setTitle("New Topic");
                             builder.setMessage("This topic is not present in DB. Do you want to add this topic?");

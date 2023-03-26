@@ -52,6 +52,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("Topic",topic);
 
         db.insertWithOnConflict("Topic",null,contentValues,SQLiteDatabase.CONFLICT_IGNORE);
+        db.close();
     }
 
     public void InsertToTitle(String title, String content, String sentence, String topic) {
@@ -72,6 +73,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("TopicId",topicId);
 
         db.insertWithOnConflict("Title",null,contentValues,SQLiteDatabase.CONFLICT_IGNORE);
+        db.close();
     }
 
     public List<String> GetTopics(){
@@ -83,6 +85,7 @@ public class DBHelper extends SQLiteOpenHelper {
             topicList.add(c.getString(0));
         }
         c.close();
+        db.close();
 
         return topicList;
     }
@@ -109,10 +112,11 @@ public class DBHelper extends SQLiteOpenHelper {
             listOfCardBody.add(cardBody);
         }
         c.close();
+        db.close();
         return listOfCardBody;
     }
 
-    public boolean isTopicPresent(String topic){
+    public boolean IsTopicPresent(String topic){
         SQLiteDatabase db = this.getReadableDatabase();
         String presence = null;
         Cursor c = db.rawQuery("SELECT TopicId FROM Topic WHERE Topic = ?",new String[]{topic});
@@ -121,8 +125,73 @@ public class DBHelper extends SQLiteOpenHelper {
             presence = c.getString(0);
         }
         c.close();
+        db.close();
         return presence != null;
     }
+
+    public boolean UpdateTopic(String old_topic,String new_topic){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String presence = null;
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("Topic",new_topic);
+
+        Cursor c = db.rawQuery("SELECT TopicId FROM Topic WHERE Topic = ?",new String[]{old_topic});
+        while(c.moveToNext()){
+            presence = c.getString(0);
+        }
+        c.close();
+
+        if(presence == null || presence.isEmpty())
+            return false;
+
+        int updateResult = db.update("Topic",contentValues,"TopicId=?",new String[]{presence});
+        db.close();
+
+        return updateResult == 1;
+    }
+
+    public boolean UpdateContents(String old_title, String old_content, String old_sentence, String new_title, String new_content, String new_sentence){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String presence = null;
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("Title",new_title);
+        contentValues.put("Content",new_content);
+        contentValues.put("Sentence",new_sentence);
+
+        Cursor c = db.rawQuery("SELECT TitleId FROM Title WHERE Title = ? AND Content = ? AND Sentence = ? ",new String[]{old_title,old_content,old_sentence});
+        while(c.moveToNext()){
+            presence = c.getString(0);
+        }
+        c.close();
+
+        if(presence == null || presence.isEmpty())
+            return false;
+
+        int updateResult = db.update("Title",contentValues,"TitleId=?",new String[]{presence});
+        db.close();
+
+        return updateResult == 1;
+    }
+
+
+    public boolean DeleteTopic(String topic){
+        SQLiteDatabase db = this.getReadableDatabase();
+        int result = db.delete("Topic","Topic=?",new String[]{topic});
+        db.close();
+        return result == 1;
+    }
+
+    public boolean DeleteContent(String title, String content, String sentence){
+        SQLiteDatabase db = this.getReadableDatabase();
+        int result = db.delete("Title","Title=? AND Content=? AND Sentence=? ",new String[]{title,content,sentence});
+        db.close();
+        return result == 1;
+    }
+
+
+
 
 
     public void GetStatus(){
@@ -146,6 +215,7 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.d("DBRecord: ", record2.toString());
         c.close();
         c2.close();
+        db.close();
     }
 
     public void FlushDB(){

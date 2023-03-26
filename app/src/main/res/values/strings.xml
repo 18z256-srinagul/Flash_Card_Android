@@ -15,4 +15,16 @@
     <string name="start">Start</string>
     <string name="next">Next</string>
     <string name="finish">Finish</string>
+    <string name="manage">Manage</string>
+    <string name="name">Name</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="current_topic">Current Topic</string>
+    <string name="new_topic">New Topic</string>
+    <string name="apply">Apply</string>
+    <string name="enter_the_new_topic">Enter the new topic name</string>
+    <string name="current_title">Current Title</string>
+    <string name="current_content">Current Content</string>
+    <string name="current_sentence">Current Sentence</string>
+    <string name="back">Back</string>
 </resources>
