@@ -8,38 +8,67 @@
 
     <Button
         android:id="@+id/insert"
-        android:layout_width="353dp"
-        android:layout_height="151dp"
-        android:text="@string/insert"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
         android:textSize="50sp"
+        android:text="@string/insert"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.634" />
+        app:layout_constraintVertical_bias="0.47" />
 
     <Button
         android:id="@+id/start"
-        android:layout_width="353dp"
-        android:layout_height="151dp"
-        android:text="@string/start"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
         android:textSize="50sp"
+        android:text="@string/start"
         app:layout_constraintBottom_toTopOf="@+id/insert"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784" />
+        app:layout_constraintVertical_bias="0.944" />
 
     <Button
         android:id="@+id/manage"
-        android:layout_width="353dp"
-        android:layout_height="151dp"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
         android:textSize="50sp"
         android:text="@string/manage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/insert"
-        app:layout_constraintVertical_bias="0.221" />
+        app:layout_constraintVertical_bias="0.047" />
+
+    <Button
+        android:id="@+id/importData"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:textSize="50sp"
+        android:text="@string/import_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manage"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <Button
+        android:id="@+id/exportData"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:textSize="50sp"
+        android:text="@string/export"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/importData"
+        app:layout_constraintVertical_bias="0.098" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,4 +27,6 @@
     <string name="current_content">Current Content</string>
     <string name="current_sentence">Current Sentence</string>
     <string name="back">Back</string>
+    <string name="import_text">Import</string>
+    <string name="export">Export</string>
 </resources>
