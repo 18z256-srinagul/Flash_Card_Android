@@ -20,7 +20,6 @@
             android:id="@+id/topicContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:isScrollContainer="true"
             android:orientation="vertical">
 
         </LinearLayout>
@@ -30,6 +29,7 @@
         android:id="@+id/manageActivityBack"
         android:layout_width="125dp"
         android:layout_height="57dp"
+        android:layout_marginBottom="56dp"
         android:text="@string/back"
         app:icon="?attr/actionModeCloseDrawable"
         app:layout_constraintBottom_toBottomOf="parent"

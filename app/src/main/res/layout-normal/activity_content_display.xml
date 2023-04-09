@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="290dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:isScrollContainer="true"
-        >
-
-        <!--        <ScrollView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="match_parent">-->
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_height="300dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -50,10 +42,10 @@
                         android:layout_height="50dp"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
-                        android:text="@string/name"
                         android:textAlignment="center"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
+                        android:text="@string/name"
+                        android:textStyle="bold"
+                        android:textSize="30sp" />
 
                     <TextView
                         android:id="@+id/contextName"
@@ -70,9 +62,9 @@
                         android:layout_height="90dp"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
+                        android:textStyle="italic"
                         android:text="@string/name"
-                        android:textSize="23sp"
-                        android:textStyle="italic" />
+                        android:textSize="23sp" />
                 </LinearLayout>
 
 
@@ -98,7 +90,7 @@
                         android:id="@+id/deleteTopic"
                         android:layout_width="50dp"
                         android:layout_height="60dp"
-                        android:layout_marginStart="180dp"
+                        android:layout_marginStart="190dp"
                         android:layout_marginEnd="20dp"
                         android:padding="10dp"
                         android:paddingStart="10dp"
@@ -111,8 +103,7 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-        <!--        </ScrollView>-->
 
-    </LinearLayout>
+    </RelativeLayout>
 
-</RelativeLayout>
+</RelativeLayout >

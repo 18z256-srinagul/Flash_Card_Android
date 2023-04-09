@@ -8,19 +8,19 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="550dp"
-        app:layout_constraintBottom_toTopOf="@+id/manageActivityBack"
+        android:layout_width="411dp"
+        android:layout_height="900dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058">
 
         <LinearLayout
             android:id="@+id/topicContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:isScrollContainer="true"
             android:orientation="vertical">
 
         </LinearLayout>
@@ -30,9 +30,10 @@
         android:id="@+id/manageActivityBack"
         android:layout_width="125dp"
         android:layout_height="57dp"
-        android:text="@string/back"
         app:icon="?attr/actionModeCloseDrawable"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        android:text="@string/back"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

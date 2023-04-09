@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.flash_card.database.DBHelper;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class EditContent_Activity extends AppCompatActivity {
 

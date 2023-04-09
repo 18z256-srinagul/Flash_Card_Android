@@ -8,31 +8,30 @@
 
     <TextView
         android:id="@+id/currentTopictextView"
-        android:layout_width="275dp"
-        android:layout_height="61dp"
+        android:layout_width="125dp"
+        android:layout_height="31dp"
         android:text="@string/current_title"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.184" />
+        app:layout_constraintVertical_bias="0.146" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="16dp"
         app:boxCornerRadiusBottomStart="16dp"
         app:boxCornerRadiusTopEnd="16dp"
         app:boxCornerRadiusTopStart="16dp"
-
         app:layout_constraintBottom_toTopOf="@+id/newTopictextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
@@ -42,6 +41,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/currentTopiceditText"
+            android:textSize="15sp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -49,25 +49,24 @@
 
     <TextView
         android:id="@+id/newTopictextView"
-        android:layout_width="275dp"
-        android:layout_height="61dp"
+        android:layout_width="125dp"
+        android:layout_height="31dp"
         android:text="@string/new_topic"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20sp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10dp"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="16dp"
         app:boxCornerRadiusBottomStart="16dp"
@@ -75,23 +74,26 @@
         app:boxCornerRadiusTopStart="16dp"
         app:layout_constraintBottom_toTopOf="@+id/applyButtonEditTopic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.322"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/newTopictextView"
-        app:layout_constraintVertical_bias="0.19">
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/newTopiceditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/enter_the_new_topic" />
+            android:hint="@string/enter_the_new_topic"
+            android:textSize="15sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/applyButtonEditTopic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="14sp"
         android:text="@string/apply"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

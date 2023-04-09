@@ -8,35 +8,37 @@
 
     <TextView
         android:id="@+id/currentTitletextView"
-        android:layout_width="275dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="355dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="320dp"
         android:text="@string/current_title"
-        android:textSize="30sp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="16dp"
         app:boxCornerRadiusBottomStart="16dp"
         app:boxCornerRadiusTopEnd="16dp"
         app:boxCornerRadiusTopStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currentTitletextView">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/currentTitleeditText"
+            android:textSize="40sp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/current_title" />
@@ -44,13 +46,13 @@
 
     <TextView
         android:id="@+id/currentContenttextView"
-        android:layout_width="275dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="355dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="144dp"
         android:text="@string/current_content"
-        android:textSize="30sp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         tools:ignore="NotSibling" />
@@ -61,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="16dp"
@@ -74,6 +76,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/currentContenteditText"
+            android:textSize="40sp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/current_content" />
@@ -81,13 +84,13 @@
 
     <TextView
         android:id="@+id/currentSentencetextView"
-        android:layout_width="275dp"
-        android:layout_height="61dp"
+        android:layout_width="455dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="152dp"
         android:text="@string/current_sentence"
-        android:textSize="30sp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
         tools:ignore="NotSibling" />
@@ -97,7 +100,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="16dp"
@@ -113,6 +116,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/currentSentenceeditText"
+            android:textSize="40sp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/current_sentence" />
@@ -122,8 +126,9 @@
         android:id="@+id/cancelButtonWithEditContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/cancel"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.191"
@@ -133,8 +138,9 @@
         android:id="@+id/applyButtonEditContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/apply"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.554"

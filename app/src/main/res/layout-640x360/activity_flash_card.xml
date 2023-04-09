@@ -34,7 +34,6 @@
     <TextView
         android:id="@+id/textForTitle"
         android:layout_width="295dp"
-        android:layout_marginStart="5sp"
         android:layout_height="55dp"
         android:outlineProvider="bounds"
         android:padding="5sp"

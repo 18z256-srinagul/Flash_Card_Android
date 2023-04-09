@@ -18,7 +18,7 @@ public class Manage_Activity extends AppCompatActivity {
 
     LinearLayout linearLayout;
     Button backButton;
-    DBHelper dbHelper = new DBHelper(Manage_Activity.this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,54 +30,57 @@ public class Manage_Activity extends AppCompatActivity {
 
         backButton.setOnClickListener(
                 (View view) -> {
-                    Intent takeToMainActivity = new Intent(Manage_Activity.this,MainActivity.class);
+                    Intent takeToMainActivity = new Intent(Manage_Activity.this, MainActivity.class);
                     startActivity(takeToMainActivity);
                 }
         );
 
-        List<String> topicList =  dbHelper.GetTopics();
+        try (DBHelper dbHelper = new DBHelper(Manage_Activity.this)) {
 
-        for(String topic : topicList){
-            final View view = getLayoutInflater().inflate(R.layout.activity_topic_display,null);
-            TextView topicName = view.findViewById(R.id.topicName);
-            topicName.setText(topic);
+            List<String> topicList = dbHelper.GetTopics();
 
-            Button selectButton = view.findViewById(R.id.selectTopic);
-            Button editButton = view.findViewById(R.id.editTopic);
-            Button deleteButton = view.findViewById(R.id.deleteTopic);
+            for (String topic : topicList) {
+                final View view = getLayoutInflater().inflate(R.layout.activity_topic_display, null);
+                TextView topicName = view.findViewById(R.id.topicName);
+                topicName.setText(topic);
 
-            selectButton.setOnClickListener(
-                    (View view1) -> {
-                        Log.d("SelectButton",topic);
-                        Intent editTopicNameIntent = new Intent(Manage_Activity.this,ViewContents_Activity.class);
-                        editTopicNameIntent.putExtra("selected_topic",topic);
-                        startActivity(editTopicNameIntent);
-                    }
-            );
+                Button selectButton = view.findViewById(R.id.selectTopic);
+                Button editButton = view.findViewById(R.id.editTopic);
+                Button deleteButton = view.findViewById(R.id.deleteTopic);
 
-            editButton.setOnClickListener(
-                    (View view1) -> {
-                        Intent editTopicNameIntent = new Intent(Manage_Activity.this,EditTopic_Activity.class);
-                        editTopicNameIntent.putExtra("old_topic",topic);
-                        startActivity(editTopicNameIntent);
-                    }
-            );
-
-            deleteButton.setOnClickListener(
-                    (View view1) -> {
-                        Log.d("DeleteButton",topic);
-                        Intent editTopicNameIntent = new Intent(Manage_Activity.this,MainActivity.class);
-                        boolean result = dbHelper.DeleteTopic(topic);
-                        if(result)
+                selectButton.setOnClickListener(
+                        (View view1) -> {
+                            Log.d("SelectButton", topic);
+                            Intent editTopicNameIntent = new Intent(Manage_Activity.this, ViewContents_Activity.class);
+                            editTopicNameIntent.putExtra("selected_topic", topic);
                             startActivity(editTopicNameIntent);
+                        }
+                );
 
-                        linearLayout.removeView(view);
-                    }
-            );
+                editButton.setOnClickListener(
+                        (View view1) -> {
+                            Intent editTopicNameIntent = new Intent(Manage_Activity.this, EditTopic_Activity.class);
+                            editTopicNameIntent.putExtra("old_topic", topic);
+                            startActivity(editTopicNameIntent);
+                        }
+                );
 
-            linearLayout.addView(view);
-            dbHelper.GetStatus();
+                deleteButton.setOnClickListener(
+                        (View view1) -> {
+                            Log.d("DeleteButton", topic);
+                            Intent editTopicNameIntent = new Intent(Manage_Activity.this, MainActivity.class);
+                            boolean result = dbHelper.DeleteTopic(topic);
+                            if (result)
+                                startActivity(editTopicNameIntent);
+
+                            linearLayout.removeView(view);
+                        }
+                );
+
+                linearLayout.addView(view);
+                dbHelper.GetStatus();
+            }
+
         }
-
     }
 }

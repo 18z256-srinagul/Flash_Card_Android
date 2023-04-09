@@ -5,26 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditContent_Activity">
-
+    
     <TextView
         android:id="@+id/currentTitletextView"
-        android:layout_width="275dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="250dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="30dp"
         android:text="@string/current_title"
-        android:textSize="30sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="16dp"
         app:boxCornerRadiusBottomStart="16dp"
@@ -39,18 +40,19 @@
             android:id="@+id/currentTitleeditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/current_title" />
+            android:hint="@string/current_title"
+            android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/currentContenttextView"
-        android:layout_width="275dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
         android:text="@string/current_content"
-        android:textSize="30sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         tools:ignore="NotSibling" />
@@ -58,10 +60,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout4"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="16dp"
@@ -69,6 +71,7 @@
         app:boxCornerRadiusTopEnd="16dp"
         app:boxCornerRadiusTopStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currentContenttextView">
 
@@ -76,28 +79,29 @@
             android:id="@+id/currentContenteditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/current_content" />
+            android:hint="@string/current_content"
+            android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/currentSentencetextView"
-        android:layout_width="275dp"
-        android:layout_height="61dp"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
         android:text="@string/current_sentence"
-        android:textSize="30sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
         tools:ignore="NotSibling" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="16dp"
@@ -109,21 +113,23 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currentSentencetextView"
-        app:layout_constraintVertical_bias="0.018">
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/currentSentenceeditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/current_sentence" />
+            android:hint="@string/current_sentence"
+            android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/cancelButtonWithEditContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/cancel"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.191"
@@ -133,8 +139,9 @@
         android:id="@+id/applyButtonEditContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/apply"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.554"
